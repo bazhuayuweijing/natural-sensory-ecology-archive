@@ -27,6 +27,19 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: backend/ml/requirements.txt
+
+      - name: Install Python deps (for ML output)
+        run: pip install -r backend/ml/requirements.txt
+
+      - name: Generate ML output (for API tests)
+        run: cd backend/ml && python3 pipeline.py
+
       - name: Run backend API tests
         run: npm run test:api
 
