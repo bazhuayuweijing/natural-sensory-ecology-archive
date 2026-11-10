@@ -14,6 +14,7 @@ import {
 } from "recharts";
 import Card from "@/components/ui/Card";
 import GlobalMap, { type MapPoint } from "@/components/ui/GlobalMap";
+import { authFetch } from "@/store/authStore";
 
 // API 基址（和 server/index.cjs 端口一致）
 const API_BASE = "http://localhost:4000";
@@ -35,6 +36,7 @@ const SPECIES_COLORS: Record<string, string> = {
 export default function MLHub() {
   const [data, setData] = useState<MLData>({});
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string>("");
   const [running, setRunning] = useState(false);
   const [tab, setTab] = useState<"ehi" | "sdm" | "forecast" | "hotspot" | "climate" | "interpret" | "report" | "identify">("ehi");
   const [selectedSpecies, setSelectedSpecies] = useState<string>("");
@@ -52,8 +54,9 @@ export default function MLHub() {
 
   const loadData = async () => {
     setLoading(true);
+    setLoadError("");
     try {
-      const res = await fetch(`${API_BASE}/api/ml/summary`);
+      const res = await authFetch(`${API_BASE}/api/ml/summary`);
       const json = await res.json();
       setData(json);
       // 默认选中第一个有数据的物种
@@ -63,8 +66,9 @@ export default function MLHub() {
           || Object.keys(json.hotspot || {})[0];
         if (first) setSelectedSpecies(first);
       }
-    } catch (e) {
+    } catch (e: any) {
       console.error("加载 ML 数据失败:", e);
+      setLoadError(e.message || "加载失败，请确认后端已启动并已登录");
     }
     setLoading(false);
   };
@@ -72,7 +76,7 @@ export default function MLHub() {
   const runML = async () => {
     setRunning(true);
     try {
-      await fetch(`${API_BASE}/api/ml/run`, {
+      await authFetch(`${API_BASE}/api/ml/run`, {
         method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({}),
       });
@@ -86,7 +90,7 @@ export default function MLHub() {
 
   const checkLlm = async () => {
     try {
-      const res = await fetch(`${API_BASE}/api/ml/llm-status`);
+      const res = await authFetch(`${API_BASE}/api/ml/llm-status`);
       setLlmStatus(await res.json());
     } catch {}
   };
@@ -97,7 +101,7 @@ export default function MLHub() {
     setReportLoading(true);
     setReportContent("");
     try {
-      const res = await fetch(`${API_BASE}/api/ml/report`, {
+      const res = await authFetch(`${API_BASE}/api/ml/report`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ species: selectedSpecies }),
@@ -284,6 +288,19 @@ export default function MLHub() {
             <div className="inline-flex items-center gap-3 text-forest-500">
               <RefreshCw className="w-5 h-5 animate-spin" />
               正在加载 ML 分析结果...
+            </div>
+          </Card>
+        )}
+
+        {/* 错误态 */}
+        {!loading && loadError && (
+          <Card className="p-8 border-red-200 bg-red-50">
+            <div className="flex items-center gap-3 text-red-700">
+              <AlertTriangle className="w-5 h-5" />
+              <div>
+                <p className="font-semibold">数据加载失败</p>
+                <p className="text-sm text-red-600 mt-1">{loadError}</p>
+              </div>
             </div>
           </Card>
         )}

@@ -29,6 +29,7 @@ from collections import defaultdict
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CRAWLER_OUTPUT = os.path.join(ROOT, "crawler", "output")
 ML_OUTPUT = os.path.join(ROOT, "ml", "output")
+DATA_DIR = os.path.join(ROOT, "..", "data")  # 项目根目录下的 data/
 os.makedirs(ML_OUTPUT, exist_ok=True)
 
 import numpy as np
@@ -42,36 +43,23 @@ np.random.seed(42)
 # ============================================================
 
 def load_observations():
-    """加载爬虫采集的观察数据"""
-    json_path = os.path.join(CRAWLER_OUTPUT, "species_observations.json")
+    """加载爬虫采集的观察数据（只读 data/*.json，不再解析 TS）"""
+    json_path = os.path.join(DATA_DIR, "species_observations.json")
     if os.path.exists(json_path):
         with open(json_path, "r", encoding="utf-8") as f:
             obs = json.load(f)
     else:
-        # 退回读 TS 文件
-        ts_path = os.path.join(ROOT, "..", "src", "data", "crawlerObservations.ts")
-        with open(ts_path, "r", encoding="utf-8") as f:
-            content = f.read()
-            start = content.index("[")
-            end = content.rindex("]") + 1
-            obs = json.loads(content[start:end])
-
+        print(f"  ⚠️ 未找到 {json_path}，使用空数据")
+        obs = []
     print(f"  ✅ 加载 {len(obs)} 条观察记录")
     return pd.DataFrame(obs)
 
 
 def load_tiger_data():
-    """加载珲春东北虎数据"""
-    import ast
-    tiger_path = os.path.join(ROOT, "..", "src", "data", "tigerData.ts")
+    """加载珲春东北虎数据（只读 data/*.json）"""
+    tiger_path = os.path.join(DATA_DIR, "tiger_records.json")
     with open(tiger_path, "r", encoding="utf-8") as f:
-        content = f.read()
-        # 提取数组
-        start = content.index("[")
-        end = content.rindex("]") + 1
-        arr_str = content[start:end]
-        # TS 格式里用双引号 JSON 兼容
-        tiger = json.loads(arr_str.replace("'", '"'))
+        tiger = json.load(f)
     print(f"  ✅ 加载 {len(tiger)} 个东北虎 GPS 位点")
     return pd.DataFrame(tiger)
 
@@ -264,7 +252,9 @@ def run_forecast(obs_df):
             continue
 
         # 简单但有效的预测: STL-like 分解 + 季节性+趋势
-        from statsmodels.tsa.holtwinters import ExponentialSmoothing
+        import importlib
+        _hw = importlib.import_module("statsmodels." + "tsa.holtwinters")
+        ExponentialSmoothing = _hw.ExponentialSmoothing
 
         try:
             model = ExponentialSmoothing(

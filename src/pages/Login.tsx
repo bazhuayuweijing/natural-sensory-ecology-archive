@@ -17,19 +17,17 @@ export default function Login() {
   const navigate = useNavigate();
   const { login } = useAuthStore();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
     setLoading(true);
-    setTimeout(() => {
-      const res = login(identifier, password);
-      setLoading(false);
-      if (res.success) {
-        navigate("/dashboard");
-      } else {
-        setError(res.message);
-      }
-    }, 400);
+    const res = await login(identifier, password);
+    setLoading(false);
+    if (res.success) {
+      navigate("/dashboard");
+    } else {
+      setError(res.message);
+    }
   };
 
   return (

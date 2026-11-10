@@ -37,7 +37,7 @@ const team = [
 ];
 
 const achievements = [
-  { num: "102+", label: "东北虎活动位点建档" },
+  { num: "101", label: "东北虎活动位点建档" },
   { num: "6", label: "监测物种" },
   { num: "8", label: "生态无人机" },
   { num: "200+", label: "可识别气味分子" },

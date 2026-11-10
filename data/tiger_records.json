@@ -1,0 +1,1012 @@
+[
+  {
+    "longitude": 130.3528,
+    "latitude": 42.9647,
+    "weight": 1,
+    "type": "核心繁殖区",
+    "location": "珲春保护区核心区",
+    "date": "2022-08-13",
+    "event": "红外相机首次记录到母虎携带幼崽活动，确认该区域为繁殖栖息地",
+    "significance": "对东北虎种群恢复至关重要，需严格保护"
+  },
+  {
+    "longitude": 130.2856,
+    "latitude": 42.8869,
+    "weight": 1,
+    "type": "核心繁殖区",
+    "location": "珲春一母带五崽记录点",
+    "date": "2022-07-19",
+    "event": "发现虎爪印及新鲜粪便，经 DNA 鉴定为定居雌虎 T27 家族",
+    "significance": "确认繁殖种群存在，是保护区核心价值所在"
+  },
+  {
+    "longitude": 130.3125,
+    "latitude": 42.895,
+    "weight": 1,
+    "type": "核心繁殖区",
+    "location": "珲春五虎同框记录点",
+    "date": "2023-08-28",
+    "event": "监测到雄虎与雌虎同框，疑似交配期配对行为",
+    "significance": "表明栖息地质量足以支撑育幼行为"
+  },
+  {
+    "longitude": 130.4183,
+    "latitude": 42.9215,
+    "weight": 0.95,
+    "type": "核心繁殖区",
+    "location": "珲春春化母虎定居点",
+    "date": "2022-09-26",
+    "event": "冬季雪地里发现幼虎玩耍痕迹，表明繁殖成功",
+    "significance": "为评估种群增长趋势提供关键数据"
+  },
+  {
+    "longitude": 130.4125,
+    "latitude": 42.875,
+    "weight": 0.9,
+    "type": "核心繁殖区",
+    "location": "珲春南部繁殖家庭",
+    "date": "2025-09-08",
+    "event": "红外相机连续 3 天拍摄到同一母虎带 2 只幼崽",
+    "significance": "证明中俄跨境种群交流通道畅通"
+  },
+  {
+    "longitude": 130.2857,
+    "latitude": 42.9865,
+    "weight": 0.95,
+    "type": "核心繁殖区",
+    "location": "珲春北部家族群",
+    "date": "2024-07-07",
+    "event": "发现母虎在树洞附近活动，推测为育幼巢穴",
+    "significance": "对东北虎种群恢复至关重要，需严格保护"
+  },
+  {
+    "longitude": 130.4215,
+    "latitude": 43.1254,
+    "weight": 0.9,
+    "type": "核心繁殖区",
+    "location": "珲春东北部",
+    "date": "2022-09-06",
+    "event": "记录到亚成体虎独立活动，标志幼崽已开始扩散",
+    "significance": "确认繁殖种群存在，是保护区核心价值所在"
+  },
+  {
+    "longitude": 130.5124,
+    "latitude": 42.7932,
+    "weight": 0.8,
+    "type": "稳定栖息区",
+    "location": "珲春敬信",
+    "date": "2025-10-10",
+    "event": "冬季发现虎的卧痕，推测为休息点",
+    "significance": "需持续监测确保不被人类活动干扰"
+  },
+  {
+    "longitude": 130.6247,
+    "latitude": 42.6853,
+    "weight": 0.8,
+    "type": "稳定栖息区",
+    "location": "珲春板石",
+    "date": "2022-11-14",
+    "event": "记录到虎捕食野猪后的残骸",
+    "significance": "维持种群连通性的关键走廊"
+  },
+  {
+    "longitude": 130.1547,
+    "latitude": 43.1852,
+    "weight": 0.8,
+    "type": "稳定栖息区",
+    "location": "珲春春化镇",
+    "date": "2024-06-10",
+    "event": "红外相机连续记录同一虎个体经过",
+    "significance": "保障虎的日常活动和猎物获取"
+  },
+  {
+    "longitude": 130.0854,
+    "latitude": 43.2547,
+    "weight": 0.75,
+    "type": "稳定栖息区",
+    "location": "珲春杨泡",
+    "date": "2023-05-23",
+    "event": "发现虎与梅花鹿同区域活动，为猎食关系",
+    "significance": "栖息地完整性的重要指示位点"
+  },
+  {
+    "longitude": 130.3521,
+    "latitude": 42.9512,
+    "weight": 0.8,
+    "type": "活动扩散区",
+    "location": "珲春英安镇荒山村",
+    "date": "2025-08-28",
+    "event": "发现单次虎足迹，未形成稳定活动路线",
+    "significance": "需关注扩散个体的生存风险"
+  },
+  {
+    "longitude": 130.5241,
+    "latitude": 43.2547,
+    "weight": 0.8,
+    "type": "稳定栖息区",
+    "location": "珲春马滴达北",
+    "date": "2023-10-23",
+    "event": "春季记录到虎的求偶吼叫",
+    "significance": "维持种群连通性的关键走廊"
+  },
+  {
+    "longitude": 130.4875,
+    "latitude": 43.1874,
+    "weight": 0.75,
+    "type": "稳定栖息区",
+    "location": "珲春马滴达南",
+    "date": "2024-09-12",
+    "event": "发现虎的足迹链沿溪谷延伸",
+    "significance": "保障虎的日常活动和猎物获取"
+  },
+  {
+    "longitude": 130.3541,
+    "latitude": 43.0875,
+    "weight": 0.8,
+    "type": "稳定栖息区",
+    "location": "珲春杨泡北",
+    "date": "2022-08-24",
+    "event": "红外相机记录到虎在清晨活动，符合晨昏习性",
+    "significance": "栖息地完整性的重要指示位点"
+  },
+  {
+    "longitude": 130.6241,
+    "latitude": 42.9547,
+    "weight": 0.75,
+    "type": "稳定栖息区",
+    "location": "珲春敬信北",
+    "date": "2025-11-03",
+    "event": "该位点位于两个山头之间的鞍部，是虎的必经之路",
+    "significance": "需持续监测确保不被人类活动干扰"
+  },
+  {
+    "longitude": 130.5247,
+    "latitude": 42.8541,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "珲春敬信西",
+    "date": "2023-10-15",
+    "event": "记录到亚成体虎离开母虎领地后的首次探索",
+    "significance": "反映亚成体扩散行为，有助于种群基因交流"
+  },
+  {
+    "longitude": 130.4215,
+    "latitude": 42.7458,
+    "weight": 0.65,
+    "type": "活动扩散区",
+    "location": "珲春敬信西南",
+    "date": "2024-09-18",
+    "event": "发现虎爪印但无其他痕迹，推测为过路",
+    "significance": "提示潜在栖息地范围，可考虑生态廊道建设"
+  },
+  {
+    "longitude": 130.3254,
+    "latitude": 43.0541,
+    "weight": 0.75,
+    "type": "稳定栖息区",
+    "location": "珲春杨泡东",
+    "date": "2023-08-19",
+    "event": "红外相机拍摄到虎携带猎物经过",
+    "significance": "栖息地完整性的重要指示位点"
+  },
+  {
+    "longitude": 130.2547,
+    "latitude": 43.1245,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "珲春杨泡东北",
+    "date": "2022-07-05",
+    "event": "虎在该区域活动时间短，可能为扩散途中",
+    "significance": "需关注扩散个体的生存风险"
+  },
+  {
+    "longitude": 131.0125,
+    "latitude": 42.8547,
+    "weight": 0.6,
+    "type": "活动扩散区",
+    "location": "珲春南部边境A",
+    "date": "2023-03-15",
+    "event": "红外相机偶发记录到亚成体虎经过，推测为扩散个体",
+    "significance": "反映亚成体扩散行为，有助于种群基因交流"
+  },
+  {
+    "longitude": 131.1547,
+    "latitude": 42.7541,
+    "weight": 0.65,
+    "type": "活动扩散区",
+    "location": "珲春东南边境B",
+    "date": "2025-04-27",
+    "event": "发现单次虎足迹，未形成稳定活动路线",
+    "significance": "提示潜在栖息地范围，可考虑生态廊道建设"
+  },
+  {
+    "longitude": 131.2541,
+    "latitude": 42.6547,
+    "weight": 0.6,
+    "type": "活动扩散区",
+    "location": "珲春南部边境C",
+    "date": "2023-05-11",
+    "event": "记录到陌生雄虎经过，可能为领地探索",
+    "significance": "说明保护区容纳量仍有扩展空间"
+  },
+  {
+    "longitude": 131.0875,
+    "latitude": 42.9541,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "珲春东南部",
+    "date": "2025-03-03",
+    "event": "冬季发现虎足迹延伸至保护区边界",
+    "significance": "需关注扩散个体的生存风险"
+  },
+  {
+    "longitude": 131.0245,
+    "latitude": 42.9245,
+    "weight": 0.65,
+    "type": "活动扩散区",
+    "location": "珲春南部",
+    "date": "2022-03-01",
+    "event": "红外相机拍摄到虎快速穿越该区域",
+    "significance": "反映亚成体扩散行为，有助于种群基因交流"
+  },
+  {
+    "longitude": 130.1258,
+    "latitude": 43.2187,
+    "weight": 0.85,
+    "type": "核心繁殖区",
+    "location": "汪清保护区兰家",
+    "date": "2023-06-15",
+    "event": "发现 3 只幼虎同框，为本季繁殖成功案例",
+    "significance": "对东北虎种群恢复至关重要，需严格保护"
+  },
+  {
+    "longitude": 130.2341,
+    "latitude": 43.3542,
+    "weight": 0.85,
+    "type": "核心繁殖区",
+    "location": "汪清保护区",
+    "date": "2025-07-11",
+    "event": "记录到雄虎巡视领地边界，吼叫标记行为明显",
+    "significance": "确认繁殖种群存在，是保护区核心价值所在"
+  },
+  {
+    "longitude": 129.9865,
+    "latitude": 43.5428,
+    "weight": 0.8,
+    "type": "稳定栖息区",
+    "location": "汪清罗子沟",
+    "date": "2024-04-03",
+    "event": "记录到虎捕食野猪后的残骸",
+    "significance": "需持续监测确保不被人类活动干扰"
+  },
+  {
+    "longitude": 129.8547,
+    "latitude": 43.4258,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "汪清天桥岭",
+    "date": "2024-03-26",
+    "event": "红外相机单次记录，未再出现",
+    "significance": "反映亚成体扩散行为，有助于种群基因交流"
+  },
+  {
+    "longitude": 129.9245,
+    "latitude": 43.3541,
+    "weight": 0.75,
+    "type": "稳定栖息区",
+    "location": "汪清大兴沟",
+    "date": "2025-04-11",
+    "event": "发现虎与梅花鹿同区域活动，为猎食关系",
+    "significance": "保障虎的日常活动和猎物获取"
+  },
+  {
+    "longitude": 129.5241,
+    "latitude": 43.3563,
+    "weight": 0.5,
+    "type": "活动扩散区",
+    "location": "汪清西南部",
+    "date": "2025-12-13",
+    "event": "红外相机偶发记录到亚成体虎经过，推测为扩散个体",
+    "significance": "说明保护区容纳量仍有扩展空间"
+  },
+  {
+    "longitude": 129.7541,
+    "latitude": 43.4245,
+    "weight": 0.6,
+    "type": "活动扩散区",
+    "location": "汪清西",
+    "date": "2024-02-25",
+    "event": "发现单次虎足迹，未形成稳定活动路线",
+    "significance": "需关注扩散个体的生存风险"
+  },
+  {
+    "longitude": 129.8245,
+    "latitude": 43.4875,
+    "weight": 0.65,
+    "type": "活动扩散区",
+    "location": "汪清西北",
+    "date": "2022-03-04",
+    "event": "记录到陌生雄虎经过，可能为领地探索",
+    "significance": "反映亚成体扩散行为，有助于种群基因交流"
+  },
+  {
+    "longitude": 129.9145,
+    "latitude": 43.6247,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "汪清北",
+    "date": "2024-04-01",
+    "event": "冬季发现虎足迹延伸至保护区边界",
+    "significance": "提示潜在栖息地范围，可考虑生态廊道建设"
+  },
+  {
+    "longitude": 130.0245,
+    "latitude": 43.3547,
+    "weight": 0.75,
+    "type": "稳定栖息区",
+    "location": "汪清东",
+    "date": "2025-05-11",
+    "event": "该位点位于两个山头之间的鞍部，是虎的必经之路",
+    "significance": "栖息地完整性的重要指示位点"
+  },
+  {
+    "longitude": 130.0875,
+    "latitude": 43.4241,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "汪清东北",
+    "date": "2024-05-25",
+    "event": "该位点为虎偶发觅食区域，猎物密度较低",
+    "significance": "需关注扩散个体的生存风险"
+  },
+  {
+    "longitude": 129.8541,
+    "latitude": 43.2875,
+    "weight": 0.65,
+    "type": "活动扩散区",
+    "location": "汪清天桥岭南",
+    "date": "2022-03-28",
+    "event": "记录到亚成体虎离开母虎领地后的首次探索",
+    "significance": "反映亚成体扩散行为，有助于种群基因交流"
+  },
+  {
+    "longitude": 129.7245,
+    "latitude": 43.3541,
+    "weight": 0.6,
+    "type": "活动扩散区",
+    "location": "汪清天桥岭西",
+    "date": "2025-02-11",
+    "event": "发现虎爪印但无其他痕迹，推测为过路",
+    "significance": "提示潜在栖息地范围，可考虑生态廊道建设"
+  },
+  {
+    "longitude": 129.6245,
+    "latitude": 43.2547,
+    "weight": 0.55,
+    "type": "活动扩散区",
+    "location": "汪清天桥岭西南",
+    "date": "2023-01-23",
+    "event": "红外相机单次记录，未再出现",
+    "significance": "说明保护区容纳量仍有扩展空间"
+  },
+  {
+    "longitude": 129.9541,
+    "latitude": 43.4875,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "汪清罗子沟西",
+    "date": "2022-04-04",
+    "event": "虎在该区域活动时间短，可能为扩散途中",
+    "significance": "需关注扩散个体的生存风险"
+  },
+  {
+    "longitude": 130.0875,
+    "latitude": 43.5247,
+    "weight": 0.75,
+    "type": "稳定栖息区",
+    "location": "汪清罗子沟东",
+    "date": "2022-05-13",
+    "event": "冬季雪地追踪显示该区域为虎的移动走廊",
+    "significance": "维持种群连通性的关键走廊"
+  },
+  {
+    "longitude": 130.1547,
+    "latitude": 43.4241,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "汪清兰家北",
+    "date": "2024-06-25",
+    "event": "发现单次虎足迹，未形成稳定活动路线",
+    "significance": "提示潜在栖息地范围，可考虑生态廊道建设"
+  },
+  {
+    "longitude": 130.1874,
+    "latitude": 43.3547,
+    "weight": 0.65,
+    "type": "活动扩散区",
+    "location": "汪清兰家东",
+    "date": "2025-06-11",
+    "event": "记录到陌生雄虎经过，可能为领地探索",
+    "significance": "说明保护区容纳量仍有扩展空间"
+  },
+  {
+    "longitude": 130.8473,
+    "latitude": 43.4168,
+    "weight": 0.95,
+    "type": "核心繁殖区",
+    "location": "东宁保护区核心区",
+    "date": "2023-01-17",
+    "event": "发现虎爪印及新鲜粪便，经 DNA 鉴定为定居雌虎 T27 家族",
+    "significance": "为评估种群增长趋势提供关键数据"
+  },
+  {
+    "longitude": 130.9245,
+    "latitude": 43.2856,
+    "weight": 0.85,
+    "type": "核心繁殖区",
+    "location": "东宁三岔口",
+    "date": "2022-02-26",
+    "event": "监测到雄虎与雌虎同框，疑似交配期配对行为",
+    "significance": "证明中俄跨境种群交流通道畅通"
+  },
+  {
+    "longitude": 131.1254,
+    "latitude": 43.1247,
+    "weight": 0.8,
+    "type": "稳定栖息区",
+    "location": "东宁老黑山",
+    "date": "2022-04-05",
+    "event": "冬季发现虎的卧痕，推测为休息点",
+    "significance": "保障虎的日常活动和猎物获取"
+  },
+  {
+    "longitude": 131.0245,
+    "latitude": 43.4215,
+    "weight": 0.6,
+    "type": "活动扩散区",
+    "location": "东宁老黑山镇",
+    "date": "2024-03-22",
+    "event": "记录到亚成体虎离开母虎领地后的首次探索",
+    "significance": "说明保护区容纳量仍有扩展空间"
+  },
+  {
+    "longitude": 130.6547,
+    "latitude": 43.7541,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "东宁绥阳镇",
+    "date": "2025-11-19",
+    "event": "发现虎爪印但无其他痕迹，推测为过路",
+    "significance": "需关注扩散个体的生存风险"
+  },
+  {
+    "longitude": 131.2541,
+    "latitude": 43.0254,
+    "weight": 0.65,
+    "type": "活动扩散区",
+    "location": "东宁大肚川",
+    "date": "2024-05-18",
+    "event": "红外相机单次记录，未再出现",
+    "significance": "反映亚成体扩散行为，有助于种群基因交流"
+  },
+  {
+    "longitude": 130.9852,
+    "latitude": 43.1658,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "东宁暖泉子",
+    "date": "2022-02-18",
+    "event": "虎在该区域活动时间短，可能为扩散途中",
+    "significance": "提示潜在栖息地范围，可考虑生态廊道建设"
+  },
+  {
+    "longitude": 130.8874,
+    "latitude": 43.3541,
+    "weight": 0.75,
+    "type": "稳定栖息区",
+    "location": "东宁道河",
+    "date": "2025-01-11",
+    "event": "春季记录到虎的求偶吼叫",
+    "significance": "栖息地完整性的重要指示位点"
+  },
+  {
+    "longitude": 130.7245,
+    "latitude": 43.5247,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "东宁细鳞河",
+    "date": "2022-12-13",
+    "event": "发现单次虎足迹，未形成稳定活动路线",
+    "significance": "需关注扩散个体的生存风险"
+  },
+  {
+    "longitude": 131.3547,
+    "latitude": 43.0215,
+    "weight": 0.6,
+    "type": "活动扩散区",
+    "location": "东宁三岔口镇",
+    "date": "2024-06-14",
+    "event": "记录到陌生雄虎经过，可能为领地探索",
+    "significance": "反映亚成体扩散行为，有助于种群基因交流"
+  },
+  {
+    "longitude": 130.9241,
+    "latitude": 43.3547,
+    "weight": 0.85,
+    "type": "核心繁殖区",
+    "location": "东宁保护区北部",
+    "date": "2025-02-11",
+    "event": "发现 3 只幼虎同框，为本季繁殖成功案例",
+    "significance": "为评估种群增长趋势提供关键数据"
+  },
+  {
+    "longitude": 130.8125,
+    "latitude": 43.4241,
+    "weight": 0.8,
+    "type": "稳定栖息区",
+    "location": "东宁绥阳南",
+    "date": "2024-01-25",
+    "event": "冬季猎物集中，虎的活动频率增加",
+    "significance": "栖息地完整性的重要指示位点"
+  },
+  {
+    "longitude": 130.7541,
+    "latitude": 43.5247,
+    "weight": 0.75,
+    "type": "稳定栖息区",
+    "location": "东宁绥阳北",
+    "date": "2022-12-13",
+    "event": "记录到虎的爪痕树，为领地标记",
+    "significance": "需持续监测确保不被人类活动干扰"
+  },
+  {
+    "longitude": 130.6541,
+    "latitude": 43.6247,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "东宁绥阳北扩区",
+    "date": "2024-11-01",
+    "event": "记录到亚成体虎离开母虎领地后的首次探索",
+    "significance": "反映亚成体扩散行为，有助于种群基因交流"
+  },
+  {
+    "longitude": 131.0875,
+    "latitude": 43.0541,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "东宁南部边境",
+    "date": "2023-03-19",
+    "event": "发现虎爪印但无其他痕迹，推测为过路",
+    "significance": "提示潜在栖息地范围，可考虑生态廊道建设"
+  },
+  {
+    "longitude": 131.2547,
+    "latitude": 43.1541,
+    "weight": 0.65,
+    "type": "活动扩散区",
+    "location": "东宁东南边境",
+    "date": "2025-05-07",
+    "event": "红外相机单次记录，未再出现",
+    "significance": "说明保护区容纳量仍有扩展空间"
+  },
+  {
+    "longitude": 131.1547,
+    "latitude": 43.2541,
+    "weight": 0.6,
+    "type": "活动扩散区",
+    "location": "东宁东",
+    "date": "2023-04-23",
+    "event": "虎在该区域活动时间短，可能为扩散途中",
+    "significance": "需关注扩散个体的生存风险"
+  },
+  {
+    "longitude": 130.9245,
+    "latitude": 43.1874,
+    "weight": 0.75,
+    "type": "稳定栖息区",
+    "location": "东宁三岔口南",
+    "date": "2024-02-12",
+    "event": "记录到虎的新鲜粪便，含野猪毛发",
+    "significance": "维持种群连通性的关键走廊"
+  },
+  {
+    "longitude": 130.8547,
+    "latitude": 43.2547,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "东宁道河北",
+    "date": "2023-01-23",
+    "event": "发现单次虎足迹，未形成稳定活动路线",
+    "significance": "提示潜在栖息地范围，可考虑生态廊道建设"
+  },
+  {
+    "longitude": 130.7845,
+    "latitude": 43.3541,
+    "weight": 0.65,
+    "type": "活动扩散区",
+    "location": "东宁道河东",
+    "date": "2025-12-11",
+    "event": "记录到陌生雄虎经过，可能为领地探索",
+    "significance": "说明保护区容纳量仍有扩展空间"
+  },
+  {
+    "longitude": 130.9541,
+    "latitude": 43.2875,
+    "weight": 0.75,
+    "type": "稳定栖息区",
+    "location": "东宁三岔口东",
+    "date": "2022-02-28",
+    "event": "该位点连接两个核心繁殖区，是基因交流走廊",
+    "significance": "需持续监测确保不被人类活动干扰"
+  },
+  {
+    "longitude": 131.0247,
+    "latitude": 43.1874,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "东宁老黑山西",
+    "date": "2024-03-12",
+    "event": "红外相机拍摄到虎快速穿越该区域",
+    "significance": "反映亚成体扩散行为，有助于种群基因交流"
+  },
+  {
+    "longitude": 131.1541,
+    "latitude": 43.0875,
+    "weight": 0.65,
+    "type": "活动扩散区",
+    "location": "东宁老黑山南",
+    "date": "2022-04-24",
+    "event": "该位点为虎偶发觅食区域，猎物密度较低",
+    "significance": "提示潜在栖息地范围，可考虑生态廊道建设"
+  },
+  {
+    "longitude": 131.2547,
+    "latitude": 43.1245,
+    "weight": 0.6,
+    "type": "活动扩散区",
+    "location": "东宁大肚川北",
+    "date": "2022-05-05",
+    "event": "记录到亚成体虎离开母虎领地后的首次探索",
+    "significance": "说明保护区容纳量仍有扩展空间"
+  },
+  {
+    "longitude": 130.0685,
+    "latitude": 44.1254,
+    "weight": 0.85,
+    "type": "核心繁殖区",
+    "location": "穆棱共和乡",
+    "date": "2022-05-26",
+    "event": "发现 3 只幼虎同框，为本季繁殖成功案例",
+    "significance": "表明栖息地质量足以支撑育幼行为"
+  },
+  {
+    "longitude": 129.8752,
+    "latitude": 44.2451,
+    "weight": 0.85,
+    "type": "核心繁殖区",
+    "location": "穆棱保护区",
+    "date": "2022-03-06",
+    "event": "记录到雄虎巡视领地边界，吼叫标记行为明显",
+    "significance": "为评估种群增长趋势提供关键数据"
+  },
+  {
+    "longitude": 130.1587,
+    "latitude": 44.0524,
+    "weight": 0.75,
+    "type": "活动扩散区",
+    "location": "穆棱碱场村",
+    "date": "2023-06-09",
+    "event": "虎在该区域活动时间短，可能为扩散途中",
+    "significance": "提示潜在栖息地范围，可考虑生态廊道建设"
+  },
+  {
+    "longitude": 130.1874,
+    "latitude": 44.0315,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "穆棱南山村",
+    "date": "2025-06-16",
+    "event": "红外相机偶发记录到亚成体虎经过，推测为扩散个体",
+    "significance": "说明保护区容纳量仍有扩展空间"
+  },
+  {
+    "longitude": 130.0875,
+    "latitude": 44.2541,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "穆棱北部",
+    "date": "2023-05-15",
+    "event": "发现单次虎足迹，未形成稳定活动路线",
+    "significance": "需关注扩散个体的生存风险"
+  },
+  {
+    "longitude": 129.9541,
+    "latitude": 44.3547,
+    "weight": 0.65,
+    "type": "活动扩散区",
+    "location": "穆棱北部边境",
+    "date": "2025-04-03",
+    "event": "记录到陌生雄虎经过，可能为领地探索",
+    "significance": "反映亚成体扩散行为，有助于种群基因交流"
+  },
+  {
+    "longitude": 129.7541,
+    "latitude": 44.1547,
+    "weight": 0.6,
+    "type": "活动扩散区",
+    "location": "穆棱西部",
+    "date": "2025-02-27",
+    "event": "冬季发现虎足迹延伸至保护区边界",
+    "significance": "提示潜在栖息地范围，可考虑生态廊道建设"
+  },
+  {
+    "longitude": 130.0245,
+    "latitude": 44.0875,
+    "weight": 0.65,
+    "type": "活动扩散区",
+    "location": "穆棱共和乡东",
+    "date": "2022-05-16",
+    "event": "红外相机拍摄到虎快速穿越该区域",
+    "significance": "说明保护区容纳量仍有扩展空间"
+  },
+  {
+    "longitude": 129.9245,
+    "latitude": 44.1547,
+    "weight": 0.6,
+    "type": "活动扩散区",
+    "location": "穆棱共和乡西",
+    "date": "2025-04-27",
+    "event": "该位点为虎偶发觅食区域，猎物密度较低",
+    "significance": "需关注扩散个体的生存风险"
+  },
+  {
+    "longitude": 130.1245,
+    "latitude": 44.1874,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "穆棱共和乡北",
+    "date": "2024-06-04",
+    "event": "记录到亚成体虎离开母虎领地后的首次探索",
+    "significance": "反映亚成体扩散行为，有助于种群基因交流"
+  },
+  {
+    "longitude": 130.2145,
+    "latitude": 44.0247,
+    "weight": 0.65,
+    "type": "活动扩散区",
+    "location": "穆棱共和乡南",
+    "date": "2024-07-09",
+    "event": "发现虎爪印但无其他痕迹，推测为过路",
+    "significance": "提示潜在栖息地范围，可考虑生态廊道建设"
+  },
+  {
+    "longitude": 130.0875,
+    "latitude": 44.0541,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "穆棱碱场村东",
+    "date": "2023-05-11",
+    "event": "红外相机单次记录，未再出现",
+    "significance": "说明保护区容纳量仍有扩展空间"
+  },
+  {
+    "longitude": 130.1245,
+    "latitude": 44.0875,
+    "weight": 0.65,
+    "type": "活动扩散区",
+    "location": "穆棱碱场村北",
+    "date": "2022-06-16",
+    "event": "虎在该区域活动时间短，可能为扩散途中",
+    "significance": "需关注扩散个体的生存风险"
+  },
+  {
+    "longitude": 130.1547,
+    "latitude": 44.1245,
+    "weight": 0.6,
+    "type": "活动扩散区",
+    "location": "穆棱碱场村西",
+    "date": "2022-06-25",
+    "event": "红外相机偶发记录到亚成体虎经过，推测为扩散个体",
+    "significance": "反映亚成体扩散行为，有助于种群基因交流"
+  },
+  {
+    "longitude": 130.1874,
+    "latitude": 44.0547,
+    "weight": 0.7,
+    "type": "活动扩散区",
+    "location": "穆棱碱场村南",
+    "date": "2023-06-11",
+    "event": "发现单次虎足迹，未形成稳定活动路线",
+    "significance": "提示潜在栖息地范围，可考虑生态廊道建设"
+  },
+  {
+    "longitude": 129.8547,
+    "latitude": 44.1874,
+    "weight": 0.6,
+    "type": "活动扩散区",
+    "location": "穆棱保护区东",
+    "date": "2024-03-04",
+    "event": "记录到陌生雄虎经过，可能为领地探索",
+    "significance": "说明保护区容纳量仍有扩展空间"
+  },
+  {
+    "longitude": 129.8245,
+    "latitude": 44.2245,
+    "weight": 0.55,
+    "type": "活动扩散区",
+    "location": "穆棱保护区北",
+    "date": "2024-03-13",
+    "event": "冬季发现虎足迹延伸至保护区边界",
+    "significance": "需关注扩散个体的生存风险"
+  },
+  {
+    "longitude": 129.9145,
+    "latitude": 44.2041,
+    "weight": 0.6,
+    "type": "活动扩散区",
+    "location": "穆棱保护区西",
+    "date": "2022-04-21",
+    "event": "红外相机拍摄到虎快速穿越该区域",
+    "significance": "反映亚成体扩散行为，有助于种群基因交流"
+  },
+  {
+    "longitude": 131.5247,
+    "latitude": 45.3241,
+    "weight": 0.4,
+    "type": "偶发目击",
+    "location": "密山市杨木乡",
+    "date": "2022-08-21",
+    "event": "当地村民报告发现虎足迹，经确认为真实",
+    "significance": "提示需加强保护区周边社区宣教"
+  },
+  {
+    "longitude": 131.1245,
+    "latitude": 44.8542,
+    "weight": 0.3,
+    "type": "偶发目击",
+    "location": "密山其他区域A",
+    "date": "2023-04-27",
+    "event": "红外相机意外拍摄到虎，此前无记录",
+    "significance": "反映虎的探索行为，为廊道规划提供参考"
+  },
+  {
+    "longitude": 131.2547,
+    "latitude": 44.9245,
+    "weight": 0.25,
+    "type": "偶发目击",
+    "location": "密山其他区域B",
+    "date": "2022-05-13",
+    "event": "冬季雪地发现虎足迹，但未追踪到个体",
+    "significance": "偶发记录需结合长期监测判断趋势"
+  },
+  {
+    "longitude": 131.3541,
+    "latitude": 45.1247,
+    "weight": 0.2,
+    "type": "偶发目击",
+    "location": "密山北部",
+    "date": "2022-06-17",
+    "event": "保护区边缘记录到虎活动，可能来自俄罗斯跨境",
+    "significance": "扩大已知分布范围，具有记录价值"
+  },
+  {
+    "longitude": 131.4245,
+    "latitude": 45.2547,
+    "weight": 0.2,
+    "type": "偶发目击",
+    "location": "密山东北部",
+    "date": "2023-07-07",
+    "event": "红外相机拍摄到虎夜间经过居民点附近",
+    "significance": "提示需加强保护区周边社区宣教"
+  },
+  {
+    "longitude": 131.1547,
+    "latitude": 44.7541,
+    "weight": 0.25,
+    "type": "偶发目击",
+    "location": "密山南部",
+    "date": "2025-04-11",
+    "event": "巡护队员在山脊观察到虎的轮廓",
+    "significance": "反映虎的探索行为，为廊道规划提供参考"
+  },
+  {
+    "longitude": 128.9542,
+    "latitude": 43.1245,
+    "weight": 0.4,
+    "type": "偶发目击",
+    "location": "敦化黄泥河",
+    "date": "2022-06-05",
+    "event": "发现虎的粪便，经鉴定为近期活动",
+    "significance": "偶发记录需结合长期监测判断趋势"
+  },
+  {
+    "longitude": 129.3247,
+    "latitude": 42.8563,
+    "weight": 0.45,
+    "type": "偶发目击",
+    "location": "安图长白山北坡",
+    "date": "2023-10-17",
+    "event": "该位点距核心区较远，虎偶有扩散至此",
+    "significance": "扩大已知分布范围，具有记录价值"
+  },
+  {
+    "longitude": 129.7854,
+    "latitude": 42.5241,
+    "weight": 0.35,
+    "type": "偶发目击",
+    "location": "和龙",
+    "date": "2022-02-21",
+    "event": "红外相机记录到虎但未重复出现",
+    "significance": "提示需加强保护区周边社区宣教"
+  },
+  {
+    "longitude": 127.5241,
+    "latitude": 43.8563,
+    "weight": 0.25,
+    "type": "偶发目击",
+    "location": "蛟河",
+    "date": "2023-04-09",
+    "event": "村民报告家畜被捕食，现场发现虎毛",
+    "significance": "反映虎的探索行为，为廊道规划提供参考"
+  },
+  {
+    "longitude": 130.2541,
+    "latitude": 43.9547,
+    "weight": 0.55,
+    "type": "活动扩散区",
+    "location": "汪清北部",
+    "date": "2025-07-23",
+    "event": "该位点为虎偶发觅食区域，猎物密度较低",
+    "significance": "需关注扩散个体的生存风险"
+  },
+  {
+    "longitude": 130.3547,
+    "latitude": 43.8541,
+    "weight": 0.5,
+    "type": "活动扩散区",
+    "location": "汪清东北部",
+    "date": "2023-08-07",
+    "event": "记录到亚成体虎离开母虎领地后的首次探索",
+    "significance": "反映亚成体扩散行为，有助于种群基因交流"
+  },
+  {
+    "longitude": 129.6247,
+    "latitude": 43.2541,
+    "weight": 0.4,
+    "type": "偶发目击",
+    "location": "汪清西南部B",
+    "date": "2023-01-23",
+    "event": "护林员在溪边发现虎饮水痕迹",
+    "significance": "提示需加强保护区周边社区宣教"
+  },
+  {
+    "longitude": 129.8541,
+    "latitude": 42.9245,
+    "weight": 0.35,
+    "type": "偶发目击",
+    "location": "图们江流域",
+    "date": "2022-03-01",
+    "event": "护林员巡护时目击虎横穿道路，约 200 米距离",
+    "significance": "反映虎的探索行为，为廊道规划提供参考"
+  },
+  {
+    "longitude": 129.7541,
+    "latitude": 42.8247,
+    "weight": 0.3,
+    "type": "偶发目击",
+    "location": "图们江流域南",
+    "date": "2024-02-13",
+    "event": "当地村民报告发现虎足迹，经确认为真实",
+    "significance": "偶发记录需结合长期监测判断趋势"
+  },
+  {
+    "longitude": 129.9245,
+    "latitude": 42.9541,
+    "weight": 0.3,
+    "type": "偶发目击",
+    "location": "图们江流域东",
+    "date": "2025-04-03",
+    "event": "红外相机意外拍摄到虎，此前无记录",
+    "significance": "扩大已知分布范围，具有记录价值"
+  }
+]

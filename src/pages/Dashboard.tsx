@@ -109,7 +109,9 @@ const insights = (() => {
 
 export default function Dashboard() {
   const user = useAuthStore((s) => s.user);
-  const { data: apiData } = useCrawlerData();
+  const { data: apiData, error: apiError } = useCrawlerData();
+  const updatedAt = new Date().toLocaleString("zh-CN");
+  const dataSource = "iNaturalist + 珲春东北虎国家级自然保护区";
 
   return (
     <div className="bg-cream min-h-screen py-10">
@@ -125,6 +127,13 @@ export default function Dashboard() {
           </div>
           <RefreshButton lastUpdated={apiData?.fileCrawledAt || null} />
         </div>
+
+        {apiError && (
+          <div className="mb-6 p-4 rounded-xl bg-red-50 border border-red-200 text-sm text-red-700 flex items-center gap-2">
+            <AlertTriangle className="w-4 h-4 flex-shrink-0" />
+            <span>后端服务暂不可达，当前展示本地缓存数据。错误：{apiError}</span>
+          </div>
+        )}
 
         {/* 核心指标卡片 — 全部来自爬虫真实数据 */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
@@ -190,7 +199,7 @@ export default function Dashboard() {
         </div>
 
         {/* 数据洞察摘要横幅 */}
-        <Card className="p-6 mb-8 bg-gradient-to-r from-forest-50 to-moss-50 border-forest-100">
+        <Card className="p-6 mb-4 bg-gradient-to-r from-forest-50 to-moss-50 border-forest-100">
           <div className="flex items-start gap-3">
             <div className="w-10 h-10 rounded-xl bg-forest-600 flex items-center justify-center shrink-0">
               <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -207,13 +216,22 @@ export default function Dashboard() {
           </div>
         </Card>
 
+        {/* 数据来源与样本量声明 */}
+        <div className="mb-6 flex flex-wrap items-center gap-x-6 gap-y-1 text-xs text-forest-500">
+          <span>📊 样本量：全球观察 n={crawlerStats.total_observations}，珲春位点 n={tigerRecords.length}（趋势仅供参考）</span>
+          <span>🔗 数据来源：iNaturalist + 珲春东北虎国家级自然保护区</span>
+          <span>🕐 更新时间：{new Date().toLocaleString("zh-CN")}</span>
+        </div>
+
         {/* 三图并排 */}
         <div className="grid lg:grid-cols-3 gap-5 mb-8">
           {/* 月度趋势折线图 */}
           <Card className="p-6 lg:col-span-2">
             <h3 className="font-serif text-lg font-semibold text-forest-900 mb-4">
               近 12 个月全球物种观察趋势
+              <span className="ml-2 text-xs font-normal text-forest-400">n={crawlerStats.total_observations}</span>
             </h3>
+            <p className="text-xs text-forest-400 -mt-3 mb-3">来源：{dataSource} · 更新：{updatedAt}</p>
             <ResponsiveContainer width="100%" height={280}>
               <LineChart data={monthlyTrend} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#DDEBE0" />
@@ -247,7 +265,9 @@ export default function Dashboard() {
           <Card className="p-6">
             <h3 className="font-serif text-lg font-semibold text-forest-900 mb-4">
               东北虎栖息地类型分布
+              <span className="ml-2 text-xs font-normal text-forest-400">n={tigerRecords.length}</span>
             </h3>
+            <p className="text-xs text-forest-400 -mt-3 mb-3">来源：珲春东北虎国家级自然保护区 · 更新：{updatedAt}</p>
             <ResponsiveContainer width="100%" height={240}>
               <PieChart>
                 <Pie
@@ -288,7 +308,9 @@ export default function Dashboard() {
           <Card className="p-6">
             <h3 className="font-serif text-lg font-semibold text-forest-900 mb-4">
               观察数据物种分布
+              <span className="ml-2 text-xs font-normal text-forest-400">n={crawlerStats.total_observations}</span>
             </h3>
+            <p className="text-xs text-forest-400 -mt-3 mb-3">来源：{dataSource} · 更新：{updatedAt}</p>
             <ResponsiveContainer width="100%" height={220}>
               <PieChart>
                 <Pie
@@ -312,7 +334,9 @@ export default function Dashboard() {
           <Card className="p-6">
             <h3 className="font-serif text-lg font-semibold text-forest-900 mb-4">
               数据源分布
+              <span className="ml-2 text-xs font-normal text-forest-400">n={crawlerStats.total_observations}</span>
             </h3>
+            <p className="text-xs text-forest-400 -mt-3 mb-3">来源：{dataSource} · 更新：{updatedAt}</p>
             <ResponsiveContainer width="100%" height={220}>
               <PieChart>
                 <Pie data={sourcePie} cx="50%" cy="50%" outerRadius={80} dataKey="value">

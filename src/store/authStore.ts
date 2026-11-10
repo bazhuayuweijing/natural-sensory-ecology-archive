@@ -1,154 +1,131 @@
 import { create } from "zustand";
 
 export interface User {
-  id: string;
+  id: number;
   username: string;
-  email: string;
-  role: "user" | "researcher";
-  createdAt: string;
+  role: string;
 }
 
 interface AuthState {
   user: User | null;
+  token: string | null;
   isAuthenticated: boolean;
-  login: (identifier: string, password: string) => { success: boolean; message: string };
+  login: (username: string, password: string) => Promise<{ success: boolean; message: string }>;
   register: (
     username: string,
     email: string,
     password: string,
-    role: "user" | "researcher"
-  ) => { success: boolean; message: string };
+    role: string
+  ) => Promise<{ success: boolean; message: string }>;
   logout: () => void;
   init: () => void;
 }
 
-const STORAGE_KEY = "nsea_users";
-const SESSION_KEY = "nsea_session";
+const TOKEN_KEY = "nsea_token";
+const USER_KEY = "nsea_user";
 
-// 同步读取 localStorage，避免首次渲染时 isAuthenticated 为 false 导致路由重定向
-function readSession(): { user: User | null; isAuthenticated: boolean } {
+// 同步读取 localStorage，避免首次渲染闪烁
+function readStored(): { user: User | null; token: string | null } {
   try {
-    const raw = localStorage.getItem(SESSION_KEY);
-    if (raw) {
-      const user = JSON.parse(raw) as User;
-      return { user, isAuthenticated: true };
-    }
+    const token = localStorage.getItem(TOKEN_KEY);
+    const raw = localStorage.getItem(USER_KEY);
+    const user = raw ? (JSON.parse(raw) as User) : null;
+    return { user, token };
   } catch {
-    // ignore
-  }
-  return { user: null, isAuthenticated: false };
-}
-
-const initialSession = typeof window !== "undefined" ? readSession() : { user: null, isAuthenticated: false };
-
-interface StoredUser extends User {
-  password: string;
-}
-
-function loadUsers(): StoredUser[] {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : [];
-  } catch {
-    return [];
+    return { user: null, token: null };
   }
 }
 
-function saveUsers(users: StoredUser[]) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(users));
-}
+const stored = typeof window !== "undefined" ? readStored() : { user: null, token: null };
+
+const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:4000/api";
 
 export const useAuthStore = create<AuthState>((set) => ({
-  user: initialSession.user,
-  isAuthenticated: initialSession.isAuthenticated,
+  user: stored.user,
+  token: stored.token,
+  isAuthenticated: !!stored.token,
 
   init: () => {
+    // 启动时验证 token 是否仍然有效
+    const token = localStorage.getItem(TOKEN_KEY);
+    if (!token) {
+      set({ user: null, token: null, isAuthenticated: false });
+      return;
+    }
+    fetch(`${API_BASE}/auth/verify`, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        if (data.success && data.user) {
+          set({ user: data.user, isAuthenticated: true });
+        } else {
+          localStorage.removeItem(TOKEN_KEY);
+          localStorage.removeItem(USER_KEY);
+          set({ user: null, token: null, isAuthenticated: false });
+        }
+      })
+      .catch(() => {
+        // 后端不可达时，保留本地 token（离线可用性）
+      });
+  },
+
+  login: async (username, password) => {
     try {
-      const raw = localStorage.getItem(SESSION_KEY);
-      if (raw) {
-        const user = JSON.parse(raw) as User;
-        set({ user, isAuthenticated: true });
+      const res = await fetch(`${API_BASE}/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password }),
+      });
+      const data = await res.json();
+      if (data.success && data.token) {
+        localStorage.setItem(TOKEN_KEY, data.token);
+        localStorage.setItem(USER_KEY, JSON.stringify(data.user));
+        set({ user: data.user, token: data.token, isAuthenticated: true });
+        return { success: true, message: "登录成功" };
       }
-    } catch {
-      // ignore
+      return { success: false, message: data.message || "登录失败" };
+    } catch (e) {
+      return { success: false, message: "网络错误，请检查后端服务是否启动" };
     }
   },
 
-  register: (username, email, password, role) => {
-    const users = loadUsers();
-    if (users.some((u) => u.username === username)) {
-      return { success: false, message: "用户名已被注册" };
+  register: async (username, email, password, role) => {
+    try {
+      const res = await fetch(`${API_BASE}/register`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, email, password, role }),
+      });
+      const data = await res.json();
+      if (data.success && data.token) {
+        localStorage.setItem(TOKEN_KEY, data.token);
+        localStorage.setItem(USER_KEY, JSON.stringify(data.user));
+        set({ user: data.user, token: data.token, isAuthenticated: true });
+        return { success: true, message: "注册成功" };
+      }
+      return { success: false, message: data.message || "注册失败" };
+    } catch (e) {
+      return { success: false, message: "网络错误，请检查后端服务是否启动" };
     }
-    if (users.some((u) => u.email === email)) {
-      return { success: false, message: "邮箱已被注册" };
-    }
-    const newUser: StoredUser = {
-      id: `u_${Date.now()}`,
-      username,
-      email,
-      password,
-      role,
-      createdAt: new Date().toISOString(),
-    };
-    users.push(newUser);
-    saveUsers(users);
-    const { password: _pw, ...safeUser } = newUser;
-    localStorage.setItem(SESSION_KEY, JSON.stringify(safeUser));
-    set({ user: safeUser, isAuthenticated: true });
-    return { success: true, message: "注册成功" };
-  },
-
-  login: (identifier, password) => {
-    const users = loadUsers();
-    const found = users.find(
-      (u) =>
-        (u.username === identifier || u.email === identifier) &&
-        u.password === password
-    );
-    if (!found) {
-      return { success: false, message: "账号或密码错误" };
-    }
-    const { password: _pw, ...safeUser } = found;
-    localStorage.setItem(SESSION_KEY, JSON.stringify(safeUser));
-    set({ user: safeUser, isAuthenticated: true });
-    return { success: true, message: "登录成功" };
   },
 
   logout: () => {
-    localStorage.removeItem(SESSION_KEY);
-    set({ user: null, isAuthenticated: false });
-  },
-
-  // 导出所有本地数据（用户 + 会话）
-  exportData: () => {
-    const users = loadUsers();
-    const session = localStorage.getItem(SESSION_KEY);
-    const backup = {
-      version: 1,
-      exportedAt: new Date().toISOString(),
-      users,
-      session: session ? JSON.parse(session) : null,
-    };
-    const blob = new Blob([JSON.stringify(backup, null, 2)], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `nsea-backup-${new Date().toISOString().slice(0, 10)}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
-  },
-
-  // 统计本地数据大小
-  getDataStats: () => {
-    const keys = Object.keys(localStorage);
-    let totalBytes = 0;
-    const perKey: Record<string, number> = {};
-    for (const k of keys) {
-      const v = localStorage.getItem(k) || "";
-      const size = new Blob([k + v]).size;
-      totalBytes += size;
-      perKey[k] = size;
-    }
-    return { totalBytes, keys, perKey };
+    localStorage.removeItem(TOKEN_KEY);
+    localStorage.removeItem(USER_KEY);
+    set({ user: null, token: null, isAuthenticated: false });
   },
 }));
+
+// 供 API 请求使用的 token getter
+export function getToken(): string | null {
+  return localStorage.getItem(TOKEN_KEY);
+}
+
+// 带认证的 fetch 封装
+export async function authFetch(url: string, options: RequestInit = {}): Promise<Response> {
+  const token = getToken();
+  const headers = new Headers(options.headers);
+  if (token) headers.set("Authorization", `Bearer ${token}`);
+  return fetch(url, { ...options, headers });
+}

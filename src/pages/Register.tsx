@@ -20,7 +20,7 @@ export default function Register() {
   const navigate = useNavigate();
   const { register } = useAuthStore();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
     if (password.length < 6) {
@@ -32,15 +32,13 @@ export default function Register() {
       return;
     }
     setLoading(true);
-    setTimeout(() => {
-      const res = register(username, email, password, role);
-      setLoading(false);
-      if (res.success) {
-        navigate("/dashboard");
-      } else {
-        setError(res.message);
-      }
-    }, 400);
+    const res = await register(username, email, password, role);
+    setLoading(false);
+    if (res.success) {
+      navigate("/dashboard");
+    } else {
+      setError(res.message);
+    }
   };
 
   return (
